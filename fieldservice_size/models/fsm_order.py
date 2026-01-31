@@ -23,7 +23,7 @@ class FSMOrder(models.Model):
     size_uom = fields.Many2one(
         "uom.uom",
         string="Unit of Measure",
-        domain="[]"  # UoM categories removed in v19,
+        domain="[]",
         compute="_compute_size_uom",
         precompute=True,
         readonly=False,

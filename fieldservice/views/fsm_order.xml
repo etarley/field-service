@@ -401,7 +401,7 @@
                     name="order_upcoming_month"
                 />
                 <separator />
-                <group expand="0" string="Group By">
+                <group>
                     <filter
                         name="territory_id"
                         string="Territory"
