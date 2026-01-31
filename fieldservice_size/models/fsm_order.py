@@ -20,14 +20,10 @@ class FSMOrder(models.Model):
         readonly=False,
         store=True,
     )
-    size_uom_category = fields.Many2one(
-        string="Unit of Measure Category",
-        related="size_id.uom_id.category_id",
-    )
     size_uom = fields.Many2one(
         "uom.uom",
         string="Unit of Measure",
-        domain="[('category_id', '=?', size_uom_category)]",
+        domain="[]"  # UoM categories removed in v19,
         compute="_compute_size_uom",
         precompute=True,
         readonly=False,

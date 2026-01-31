@@ -248,7 +248,7 @@ class FSMOrder(models.Model):
     state_name = fields.Char(related="location_id.state_id.name", string="State")
     country_name = fields.Char(related="location_id.country_id.name", string="Country")
     phone = fields.Char(related="location_id.phone", string="Location Phone")
-    mobile = fields.Char(related="location_id.mobile")
+    mobile = fields.Char(related="location_id.phone", string="Mobile")  # v19: mobile merged into phone
 
     stage_name = fields.Char(related="stage_id.name", string="Stage Name")
     # Field for Stage Color
